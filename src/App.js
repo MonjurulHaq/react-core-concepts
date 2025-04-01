@@ -7,13 +7,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>This is a paragraph</p>
-        <Person></Person>
-        <Person></Person>
+        <Person name="Rakib Hossain" age="45"></Person>
+        <Person name="Salman Khan" age="58"></Person>
       </header>
     </div>
   );
 }
-function Person() {
+function Person(props) {
   const personStyle = {
     color: "pink",
     backgroundColor: "blue",
@@ -21,13 +21,11 @@ function Person() {
     margin:"10px",
     padding: "10px"
   }
-
   return (
     <div style={personStyle}>
-      <h1>Name : Abdul Ali</h1>
-      <h1>Age : 35</h1>
+      <h1>Name : {props.name}</h1>
+      <h1>Age : {props.age}</h1>
     </div>
-
   )
 }
 
