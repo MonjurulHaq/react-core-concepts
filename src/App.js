@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Product name={products[0].name} price={products[0].price}></Product>
-        <Product name={products[1].name} price={products[1].price}></Product>
-        <Product name={products[2].name} price={products[2].price}></Product>
+        <Product product = {products[0]}></Product>
+        <Product product = {products[1]}></Product>
+        <Product product = {products[2]}></Product>
       </header>
     </div>
   );
@@ -24,12 +24,12 @@ function Product(props){
     backgroundColor: "white",
     margin: "10px",
     padding: "10px",
-    width: "200px"    
+    width: "200px"
   }
   return(
     <div style={productStyle}>
-        <h2>{props.name}</h2>
-        <h4>Price: {props.price}</h4>
+        <h2>{props.product.name}</h2>
+        <h4>Price: {props.product.price}</h4>
         <button>Buy me</button>
     </div>
   )
