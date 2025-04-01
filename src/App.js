@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const products = [
     {name: "Photoshop", price: "56$"},
-    {name: "Illustrator", price: "40$"},
+    {name: "ChatGPt", price: "40$"},
     {name: "Canva", price: "free"}
   ]
   return (
@@ -26,10 +26,11 @@ function Product(props){
     padding: "10px",
     width: "200px"
   }
+  const {name, price} = props.product
   return(
     <div style={productStyle}>
-        <h2>{props.product.name}</h2>
-        <h4>Price: {props.product.price}</h4>
+        <h2>{name}</h2>
+        <h4>Price: {price}</h4>
         <button>Buy me</button>
     </div>
   )
