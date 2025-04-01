@@ -14,8 +14,16 @@ function App() {
   );
 }
 function Person() {
+  const personStyle = {
+    color: "pink",
+    backgroundColor: "blue",
+    border: "5px solid gray",
+    margin:"10px",
+    padding: "10px"
+  }
+
   return (
-    <div>
+    <div style={personStyle}>
       <h1>Name : Abdul Ali</h1>
       <h1>Age : 35</h1>
     </div>
